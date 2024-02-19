@@ -72,6 +72,18 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'authentication/static/')
+]
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+LOGIN_URL = '/signin'
+LOGOUT_REDIRECT_URL = '/homepage'
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
 WSGI_APPLICATION = 'Clover.wsgi.application'
 
 
@@ -113,6 +125,8 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 
